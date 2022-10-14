@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "nom du pc:" 
+read -p "adresse mac:"
+read -p "adresse IP:"
+
+echo  "Merci davoir entré les informations suivantes:"
+
+echo  Nom du Pc : PC1
+echo  Addresse MAC : 00:50:79:66:68:00
+echo  Addresse IP  : 10.10.4.1/16
