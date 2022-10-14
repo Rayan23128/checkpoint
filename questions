@@ -1,1 +1,117 @@
-e
+- Qu'est-ce que le symbole A représente comme matériel réseau ?
+Le symbole A représente un Switch 
+
+- Que peux-tu dire de plus sur ce matériel ?
+On peut aussi l'appeler commutateur et il permet de relier plusieurs segemnts d'un réseaux entre eux
+
+- Pour le matériel B, connais-tu ses différences avec A ?
+Le B permet la connection entre un appareil et internet alors que le A permet une connection entre différents appareils au sein d'un meme réseau 
+
+- Que représente e0, e1, e2, ... ?
+Ils représentent les différents numéros d'interface 
+
+- Que veut dire f0/0 sur l’élément B ?
+Que nous sommes sur l'interface numéro 1
+
+- Que signifie /16 ?
+Ca représente le CIDR
+
+- Que représente 10.10.255.254/16 pour ce réseau ?
+Ca représente le Masque sous-réseau
+
+- Dans le vocabulaire IP, qu'est-ce que PC1, PC2, ... ?
+- De même, qu'est-ce que A et B ?
+
+- De même, le trait rouge est-il un lien ?
+Non , il s'agit de cablage 
+
+
+11.Calcul pour chacune des adresses IP :
+- L'adresse de réseau
+- L'adresse de diffusion
+- La plage d'adresses disponible
+
+Pour 10.10.4.1/16=
+.10.10.0.1/16
+.10.10.255.254/16
+.256*255=65280 - 2 =65278-1= 65 277
+
+pour 10.11.80.2/16
+.10.11.80.1/16
+10.11.255.254/16
+.175*173=30 275
+Mais l'adresse passerelle est de 0.0.0.0
+
+pour 10.10.80.3/16
+.10.10.80.2/16
+.10.10.255.254/16
+.175*172=30100
+
+pour 10.10.4.2/16
+.10.10.4.1/16
+.10.10.255.254/16
+253*254=64262
+
+
+
+12.Suivant les résultats de calcul d'adresses que tu a obtenu à la question 11, peux-tu dire quelles machines vont pouvoir communiquer entre-elles ? Tu dois expliquer ta réponse.
+
+Le PC1, le PC3 , le PC4 et le B Car elles possèdent la meme adresse réseau : 10.10 
+
+13.De même, quelles machines vont pouvoir sortir du réseau ?
+
+Le PC 3 et 4 car le pc1 à le trait rouge signalant un probleme 
+et le PC2 le peut aussi
+
+14.Au niveau de la communication entre les machines, que se passe t'il si on interverti le câblage des machines PC2 et PC3 qui les relie au matériel A ?
+
+Cela ne change rien , car les pc2 et 3 ont des adresses mac qui leurs sont propre , changer le cablage ne changera rien
+
+15.On veut passer les adresses IP des machines en dynamique pour qu'elles puissent toutes communiquer entre-elles. Doit-on ajouter des éléments au schéma pour que cela soit possible ?
+Je ne suis pas sur , mais un serveur ?
+
+
+
+Fichier 1 :
+
+16.Dans cette trame, qui initialise la communication ?
+c'est la Source Private_66:68:00
+
+17.Est-ce que cette communication a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+OUI entre : 66:68:00 et 66:68:03
+
+18.A qui correspond le request et le reply dans toute la trame ?
+aux échanges entre les matériels a et b 
+
+19.Quels ont été les rôles des matériels A et B ?
+de s'échanger des données 
+
+
+Fichier 2 :
+
+20.Dans cette trame, qui initialise la communication ?
+la source :10.10.80.3
+
+
+21.Est-ce que cette communication a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+Non car on peut voir destination unreachable 
+
+22.Quels ont été les rôles des matériels A et B ?
+de s'échanger des données
+
+
+
+Fichier 3 :
+
+23.Dans cette trame, qui initialise la communication ?
+la source : ca:01:da:d2:00:08
+
+24.Est-ce que cette communication a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+NON car on a destiantion unreachable et host unreachable
+
+25.Quels ont été les rôles des matériels A et B ?
+
+de communiquer entre eux
+
+26.Où vois-tu les différents protocoles encapsulés ?
+Quand l'on clique sur frame 1
